@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUv-hi-lz5">
-                                <rect key="frame" x="55" y="93" width="93" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUv-hi-lz5">
+                                <rect key="frame" x="0.0" y="20" width="54" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="👻"/>
@@ -28,10 +27,26 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kua-t9-YFa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jts-Y4-VuF">
+                                <rect key="frame" x="125" y="599" width="124" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pUv-hi-lz5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C3W-m3-zgM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jts-Y4-VuF" secondAttribute="bottom" constant="20" id="Z6U-fS-XuM"/>
+                            <constraint firstItem="pUv-hi-lz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nmv-YY-OQk"/>
+                            <constraint firstItem="Jts-Y4-VuF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pUv-hi-lz5" secondAttribute="bottom" constant="8" symbolic="YES" id="p8T-vO-8Fy"/>
+                            <constraint firstItem="Jts-Y4-VuF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vw6-x5-7cM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="flipCountLabel" destination="Jts-Y4-VuF" id="9M5-rM-EMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
