@@ -39,6 +39,16 @@ class Concentration {
             let card = Card()
             cards += [card, card]
         }
+        randomizeCards()
+    }
+    
+    func randomizeCards() {
+        for _ in 0...cards.count {
+            let randomIndex = Int(arc4random_uniform(UInt32(cards.count)))
+            let randomCard = cards[randomIndex]
+            cards.insert(randomCard, at: 0)
+            cards.remove(at: randomIndex + 1)
+        }
     }
     
 }
